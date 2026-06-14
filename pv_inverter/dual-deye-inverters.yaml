@@ -146,7 +146,7 @@ packages:
   # 12 kW  3-phase LV — Modbus address 0x01
   inverter_3p:
     url: https://github.com/eradek/pv_inverters
-    refresh: 12h
+    refresh: 0s
     files:
       - path: pv_inverter/deye_hybrid_3p_dual.yaml
         vars:
@@ -164,7 +164,7 @@ packages:
   # 6 kW  1-phase LV — Modbus address 0x02
   inverter_1p:
     url: https://github.com/eradek/pv_inverters
-    refresh: 12h
+    refresh: 0s
     files:
       - path: pv_inverter/deye_hybrid_1p_dual.yaml
         vars:
