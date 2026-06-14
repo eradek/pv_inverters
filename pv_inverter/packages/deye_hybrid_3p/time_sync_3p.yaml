@@ -17,7 +17,7 @@ substitutions:
 
 time:
   - platform: homeassistant
-    id: esptime
+    id: ${inverter_prefix}_esptime
     on_time:
       - cron: "0 15 3,15 * * *"
         then:
@@ -27,24 +27,24 @@ time:
                   return "${enable_sync_time}" == "True";
               then:
                 - logger.log: "Syncing inverter time with HomeAssistant"
-                - script.execute: set_inverter_time_script
+                - script.execute: ${inverter_prefix}_set_inverter_time_script
               else:
                 - logger.log: "HomeAssistant time sync is disabled"
                 
 button:
   - platform: template
     name: "Sync Inverter Time"
-    id: sync_inverter_time
+    id: ${inverter_prefix}_sync_inverter_time
     icon: mdi:timer-sync
     entity_category: diagnostic
     on_press:
-      - script.execute: set_inverter_time_script
+      - script.execute: ${inverter_prefix}_set_inverter_time_script
 
 script:
-  - id: set_inverter_time_script
+  - id: ${inverter_prefix}_set_inverter_time_script
     then:
       - lambda: |-
-          auto time = id(esptime).now();
+          auto time = id(${inverter_prefix}_esptime).now();
           if (!time.is_valid()) {
             ESP_LOGE("time_sync", "Invalid time");
             return;

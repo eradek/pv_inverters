@@ -1,0 +1,60 @@
+# 3-phase LV inverter bundle — dual-inverter mode.
+# This file contains NO singleton components (uart/modbus/api/ota/wifi/captive_portal).
+# All singletons are provided by the parent dual-deye-inverters.yaml.
+#
+# Required substitutions (pass via vars: in the parent packages: block):
+#   modbus_inverter_address              – Modbus slave address (e.g. "0x01")
+#   modbus_controller_id                 – Unique C++ id (e.g. deye_3p_controller)
+#   inverter_prefix                      – Entity ID prefix (e.g. inv3p)
+#   default_maximum_battery_charge_current
+#   default_max_sell_power
+#   default_system_work_mode
+#   default_solar_sell
+#   default_force_off_grid
+
+substitutions:
+  friendly_name: "Deye 3P Inverter"
+  device_description: "Deye Inverter SG0XLP3"
+  modbus_controller_id: deye_3p_controller
+  modbus_hub_id: "modbus_hub"
+  inverter_prefix: "inv3p"
+  enable_sync_time: "false"
+  # Safe Mode Defaults
+  default_maximum_battery_charge_current: "140"
+  default_max_sell_power: "12000"
+  default_system_work_mode: "Zero Export To Load"
+  default_solar_sell: "on"
+  default_force_off_grid: "off"
+
+packages:
+  controller: !include packages/init_controller.yaml
+  battery: !include packages/deye_hybrid_3p/battery_3p.yaml
+  gen: !include packages/deye_hybrid_3p/gen_3p.yaml
+  grid: !include packages/deye_hybrid_3p/grid_3p.yaml
+  load: !include packages/deye_hybrid_3p/load_3p.yaml
+  work_mode: !include packages/deye_hybrid_3p/work_mode_3p.yaml
+  device: !include packages/deye_hybrid_3p/device_3p.yaml
+  inverter: !include packages/deye_hybrid_3p/inverter_3p.yaml
+  pv: !include packages/deye_hybrid_3p/pv_3p.yaml
+  tou: !include packages/deye_hybrid_3p/tou_3p.yaml
+  time_sync: !include packages/deye_hybrid_3p/time_sync_3p.yaml
+
+script:
+  - id: ${inverter_prefix}_set_safe_modbus_registers
+    then:
+      - logger.log:
+          level: INFO
+          format: "3P: Setting safe Modbus register values"
+      - number.set:
+          id: ${inverter_prefix}_maximum_battery_charge_current
+          value: ${default_maximum_battery_charge_current}
+      - number.set:
+          id: ${inverter_prefix}_max_sell_power
+          value: ${default_max_sell_power}
+      - select.set:
+          id: ${inverter_prefix}_system_work_mode
+          option: ${default_system_work_mode}
+      - switch.turn_${default_solar_sell}:
+          id: ${inverter_prefix}_switch_solar_sell
+      - switch.turn_${default_force_off_grid}:
+          id: ${inverter_prefix}_switch_off_grid

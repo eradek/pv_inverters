@@ -17,4 +17,4 @@ substitutions:
 
 packages:
   deye_hybrid_3p: !include deye_hybrid_3p_lv.yaml
-  hv: !include packages/deye_hybrid_3p/_hv.yaml
+  hv: !include packages/deye_hybrid_3p/_hv_3p.yaml

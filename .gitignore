@@ -5,4 +5,4 @@
 /.examples/
 /secrets.yaml
 pv-inv-local-test.yaml
-debug.log
+debug.log.DS_Store

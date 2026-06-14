@@ -1,0 +1,19 @@
+# Per-inverter modbus_controller block for use in a dual-inverter setup.
+# The calling YAML must provide a shared uart + modbus hub and define:
+#   modbus_controller_id  – unique C++ id for this controller (e.g. deye_3p_controller)
+#   modbus_inverter_address – Modbus slave address (e.g. "0x01")
+#   modbus_hub_id           – id of the shared modbus hub component (default: modbus_hub)
+#   inverter_prefix         – prefix for all entity IDs (e.g. inv3p / inv1p)
+
+substitutions:
+  update_interval: 5s
+  modbus_hub_id: "modbus_hub"
+
+modbus_controller:
+  - id: ${modbus_controller_id}
+    address: ${modbus_inverter_address}
+    modbus_id: ${modbus_hub_id}
+    setup_priority: -10
+    update_interval: ${update_interval}
+    command_throttle: 60ms
+    offline_skip_updates: 3

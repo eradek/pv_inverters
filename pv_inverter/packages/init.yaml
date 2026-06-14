@@ -36,9 +36,7 @@ api:
           not: api.connected
         then:
           - logger.log: "Lost connection to HomeAssistant API - Activating safe mode"
-          - script.execute: set_safe_modbus_registers
-
-  on_client_connected:
+          - script.execute: ${inverter_prefix}_set_safe_modbus_registers
     - logger.log: "Connection to HomeAssistant API restored"
 
 ota:
