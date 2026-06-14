@@ -145,7 +145,7 @@ text_sensor:
 packages:
   # 12 kW  3-phase LV — Modbus address 0x01
   inverter_3p:
-    url: https://github.com/Lewa-Reka/esphome-deye-inverter
+    url: https://github.com/eradek/pv_inverters
     refresh: 12h
     files:
       - path: pv_inverter/deye_hybrid_3p_dual.yaml
@@ -162,7 +162,7 @@ packages:
 
   # 6 kW  1-phase LV — Modbus address 0x02
   inverter_1p:
-    url: https://github.com/Lewa-Reka/esphome-deye-inverter
+    url: https://github.com/eradek/pv_inverters
     refresh: 12h
     files:
       - path: pv_inverter/deye_hybrid_1p_dual.yaml
