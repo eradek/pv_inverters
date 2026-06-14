@@ -33,7 +33,7 @@ time:
                 
 button:
   - platform: template
-    name: "Sync Inverter Time"
+    name: "${inverter_name} Sync Inverter Time"
     id: ${inverter_prefix}_sync_inverter_time
     icon: mdi:timer-sync
     entity_category: diagnostic

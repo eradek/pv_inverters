@@ -21,7 +21,7 @@ substitutions:
 
 datetime:
   - platform: template
-    name: "Time of Use 1 Start"
+    name: "${inverter_name} Time of Use 1 Start"
     id: ${inverter_prefix}_time_of_use_1_start
     type: time
     update_interval: 15s
@@ -34,7 +34,7 @@ datetime:
           value: !lambda ${func_time_to_int}
 
   - platform: template
-    name: "Time of Use 2 Start"
+    name: "${inverter_name} Time of Use 2 Start"
     id: ${inverter_prefix}_time_of_use_2_start
     type: time
     update_interval: 15s
@@ -47,7 +47,7 @@ datetime:
           value: !lambda ${func_time_to_int}
 
   - platform: template
-    name: "Time of Use 3 Start"
+    name: "${inverter_name} Time of Use 3 Start"
     id: ${inverter_prefix}_time_of_use_3_start
     type: time
     update_interval: 15s
@@ -60,7 +60,7 @@ datetime:
           value: !lambda ${func_time_to_int}
 
   - platform: template
-    name: "Time of Use 4 Start"
+    name: "${inverter_name} Time of Use 4 Start"
     id: ${inverter_prefix}_time_of_use_4_start
     type: time
     update_interval: 15s
@@ -73,7 +73,7 @@ datetime:
           value: !lambda ${func_time_to_int}
 
   - platform: template
-    name: "Time of Use 5 Start"
+    name: "${inverter_name} Time of Use 5 Start"
     id: ${inverter_prefix}_time_of_use_5_start
     type: time
     update_interval: 15s
@@ -86,7 +86,7 @@ datetime:
           value: !lambda ${func_time_to_int}
 
   - platform: template
-    name: "Time of Use 6 Start"
+    name: "${inverter_name} Time of Use 6 Start"
     id: ${inverter_prefix}_time_of_use_6_start
     type: time
     update_interval: 15s
@@ -100,7 +100,7 @@ datetime:
 
 switch:
   - platform: template
-    name: "Time of Use"
+    name: "${inverter_name} Time of Use"
     icon: "mdi:toggle-switch"
     optimistic: true
     restore_mode: DISABLED
@@ -115,7 +115,7 @@ switch:
           value: !lambda "return (int)id(${inverter_prefix}_time_of_use_enabled_raw).state & ~0b00000001;"
 
   - platform: template
-    name: "Time of Use Monday"
+    name: "${inverter_name} Time of Use Monday"
     icon: "mdi:toggle-switch"
     optimistic: true
     restore_mode: DISABLED
@@ -130,7 +130,7 @@ switch:
           value: !lambda "return (int)id(${inverter_prefix}_time_of_use_enabled_raw).state & ~0b00000010;"
 
   - platform: template
-    name: "Time of Use Tuesday"
+    name: "${inverter_name} Time of Use Tuesday"
     icon: "mdi:toggle-switch"
     optimistic: true
     restore_mode: DISABLED
@@ -145,7 +145,7 @@ switch:
           value: !lambda "return (int)id(${inverter_prefix}_time_of_use_enabled_raw).state & ~0b00000100;"
 
   - platform: template
-    name: "Time of Use Wednesday"
+    name: "${inverter_name} Time of Use Wednesday"
     icon: "mdi:toggle-switch"
     optimistic: true
     restore_mode: DISABLED
@@ -160,7 +160,7 @@ switch:
           value: !lambda "return (int)id(${inverter_prefix}_time_of_use_enabled_raw).state & ~0b00001000;"
 
   - platform: template
-    name: "Time of Use Thursday"
+    name: "${inverter_name} Time of Use Thursday"
     icon: "mdi:toggle-switch"
     optimistic: true
     restore_mode: DISABLED
@@ -175,7 +175,7 @@ switch:
           value: !lambda "return (int)id(${inverter_prefix}_time_of_use_enabled_raw).state & ~0b00010000;"
 
   - platform: template
-    name: "Time of Use Friday"
+    name: "${inverter_name} Time of Use Friday"
     icon: "mdi:toggle-switch"
     optimistic: true
     restore_mode: DISABLED
@@ -190,7 +190,7 @@ switch:
           value: !lambda "return (int)id(${inverter_prefix}_time_of_use_enabled_raw).state & ~0b00100000;"
 
   - platform: template
-    name: "Time of Use Saturday"
+    name: "${inverter_name} Time of Use Saturday"
     icon: "mdi:toggle-switch"
     optimistic: true
     restore_mode: DISABLED
@@ -205,7 +205,7 @@ switch:
           value: !lambda "return (int)id(${inverter_prefix}_time_of_use_enabled_raw).state & ~0b01000000;"
 
   - platform: template
-    name: "Time of Use Sunday"
+    name: "${inverter_name} Time of Use Sunday"
     icon: "mdi:toggle-switch"
     optimistic: true
     restore_mode: DISABLED
@@ -220,7 +220,7 @@ switch:
           value: !lambda "return (int)id(${inverter_prefix}_time_of_use_enabled_raw).state & ~0b10000000;"
 
   - platform: template
-    name: "Time of Use 1 Grid Charge"
+    name: "${inverter_name} Time of Use 1 Grid Charge"
     id: ${inverter_prefix}_switch_time_of_use_1_grid_charge
     icon: "mdi:battery-plus"
     optimistic: true
@@ -236,7 +236,7 @@ switch:
           value: !lambda "return (int)id(${inverter_prefix}_time_of_use_1_raw).state & ~0b00000001;"
 
   - platform: template
-    name: "Time of Use 1 Gen"
+    name: "${inverter_name} Time of Use 1 Gen"
     id: ${inverter_prefix}_switch_time_of_use_1_gen
     icon: "mdi:battery-plus"
     optimistic: true
@@ -252,7 +252,7 @@ switch:
           value: !lambda "return (int)id(${inverter_prefix}_time_of_use_1_raw).state & ~0b00000010;"
 
   - platform: template
-    name: "Time of Use 1 Sell"
+    name: "${inverter_name} Time of Use 1 Sell"
     id: ${inverter_prefix}_switch_time_of_use_1_sell
     icon: "mdi:battery-plus"
     optimistic: true
@@ -269,7 +269,7 @@ switch:
           value: !lambda "return (int)id(${inverter_prefix}_time_of_use_1_raw).state & ~0b00100000;"
 
   - platform: template
-    name: "Time of Use 2 Grid Charge"
+    name: "${inverter_name} Time of Use 2 Grid Charge"
     id: ${inverter_prefix}_switch_time_of_use_2_grid_charge
     icon: "mdi:battery-plus"
     optimistic: true
@@ -285,7 +285,7 @@ switch:
           value: !lambda "return (int)id(${inverter_prefix}_time_of_use_2_raw).state & ~0b00000001;"
 
   - platform: template
-    name: "Time of Use 2 Gen"
+    name: "${inverter_name} Time of Use 2 Gen"
     id: ${inverter_prefix}_switch_time_of_use_2_gen
     icon: "mdi:battery-plus"
     optimistic: true
@@ -301,7 +301,7 @@ switch:
           value: !lambda "return (int)id(${inverter_prefix}_time_of_use_2_raw).state & ~0b00000010;"
 
   - platform: template
-    name: "Time of Use 2 Sell"
+    name: "${inverter_name} Time of Use 2 Sell"
     id: ${inverter_prefix}_switch_time_of_use_2_sell
     icon: "mdi:battery-plus"
     optimistic: true
@@ -318,7 +318,7 @@ switch:
           value: !lambda "return (int)id(${inverter_prefix}_time_of_use_2_raw).state & ~0b00100000;"
 
   - platform: template
-    name: "Time of Use 3 Grid Charge"
+    name: "${inverter_name} Time of Use 3 Grid Charge"
     id: ${inverter_prefix}_switch_time_of_use_3_grid_charge
     icon: "mdi:battery-plus"
     optimistic: true
@@ -334,7 +334,7 @@ switch:
           value: !lambda "return (int)id(${inverter_prefix}_time_of_use_3_raw).state & ~0b00000001;"
 
   - platform: template
-    name: "Time of Use 3 Gen"
+    name: "${inverter_name} Time of Use 3 Gen"
     id: ${inverter_prefix}_switch_time_of_use_3_gen
     icon: "mdi:battery-plus"
     optimistic: true
@@ -350,7 +350,7 @@ switch:
           value: !lambda "return (int)id(${inverter_prefix}_time_of_use_3_raw).state & ~0b00000010;"
 
   - platform: template
-    name: "Time of Use 3 Sell"
+    name: "${inverter_name} Time of Use 3 Sell"
     id: ${inverter_prefix}_switch_time_of_use_3_sell
     icon: "mdi:battery-plus"
     optimistic: true
@@ -367,7 +367,7 @@ switch:
           value: !lambda "return (int)id(${inverter_prefix}_time_of_use_3_raw).state & ~0b00100000;"
 
   - platform: template
-    name: "Time of Use 4 Grid Charge"
+    name: "${inverter_name} Time of Use 4 Grid Charge"
     id: ${inverter_prefix}_switch_time_of_use_4_grid_charge
     icon: "mdi:battery-plus"
     optimistic: true
@@ -383,7 +383,7 @@ switch:
           value: !lambda "return (int)id(${inverter_prefix}_time_of_use_4_raw).state & ~0b00000001;"
 
   - platform: template
-    name: "Time of Use 4 Gen"
+    name: "${inverter_name} Time of Use 4 Gen"
     id: ${inverter_prefix}_switch_time_of_use_4_gen
     icon: "mdi:battery-plus"
     optimistic: true
@@ -399,7 +399,7 @@ switch:
           value: !lambda "return (int)id(${inverter_prefix}_time_of_use_4_raw).state & ~0b00000010;"
 
   - platform: template
-    name: "Time of Use 4 Sell"
+    name: "${inverter_name} Time of Use 4 Sell"
     id: ${inverter_prefix}_switch_time_of_use_4_sell
     icon: "mdi:battery-plus"
     optimistic: true
@@ -416,7 +416,7 @@ switch:
           value: !lambda "return (int)id(${inverter_prefix}_time_of_use_4_raw).state & ~0b00100000;"
 
   - platform: template
-    name: "Time of Use 5 Grid Charge"
+    name: "${inverter_name} Time of Use 5 Grid Charge"
     id: ${inverter_prefix}_switch_time_of_use_5_grid_charge
     icon: "mdi:battery-plus"
     optimistic: true
@@ -432,7 +432,7 @@ switch:
           value: !lambda "return (int)id(${inverter_prefix}_time_of_use_5_raw).state & ~0b00000001;"
 
   - platform: template
-    name: "Time of Use 5 Gen"
+    name: "${inverter_name} Time of Use 5 Gen"
     id: ${inverter_prefix}_switch_time_of_use_5_gen
     icon: "mdi:battery-plus"
     optimistic: true
@@ -448,7 +448,7 @@ switch:
           value: !lambda "return (int)id(${inverter_prefix}_time_of_use_5_raw).state & ~0b00000010;"
 
   - platform: template
-    name: "Time of Use 5 Sell"
+    name: "${inverter_name} Time of Use 5 Sell"
     id: ${inverter_prefix}_switch_time_of_use_5_sell
     icon: "mdi:battery-plus"
     optimistic: true
@@ -465,7 +465,7 @@ switch:
           value: !lambda "return (int)id(${inverter_prefix}_time_of_use_5_raw).state & ~0b00100000;"
 
   - platform: template
-    name: "Time of Use 6 Grid Charge"
+    name: "${inverter_name} Time of Use 6 Grid Charge"
     id: ${inverter_prefix}_switch_time_of_use_6_grid_charge
     icon: "mdi:battery-plus"
     optimistic: true
@@ -481,7 +481,7 @@ switch:
           value: !lambda "return (int)id(${inverter_prefix}_time_of_use_6_raw).state & ~0b00000001;"
 
   - platform: template
-    name: "Time of Use 6 Gen"
+    name: "${inverter_name} Time of Use 6 Gen"
     id: ${inverter_prefix}_switch_time_of_use_6_gen
     icon: "mdi:battery-plus"
     optimistic: true
@@ -497,7 +497,7 @@ switch:
           value: !lambda "return (int)id(${inverter_prefix}_time_of_use_6_raw).state & ~0b00000010;"
 
   - platform: template
-    name: "Time of Use 6 Sell"
+    name: "${inverter_name} Time of Use 6 Sell"
     id: ${inverter_prefix}_switch_time_of_use_6_sell
     icon: "mdi:battery-plus"
     optimistic: true
@@ -514,7 +514,7 @@ switch:
           value: !lambda "return (int)id(${inverter_prefix}_time_of_use_6_raw).state & ~0b00100000;"
 
   - platform: template
-    name: "Time of Use All Grid Charge"
+    name: "${inverter_name} Time of Use All Grid Charge"
     id: ${inverter_prefix}_switch_time_of_use_all_grid_charge
     icon: "mdi:battery-plus"
     optimistic: true
@@ -550,7 +550,7 @@ switch:
           id: ${inverter_prefix}_switch_time_of_use_6_grid_charge
 
   - platform: template
-    name: "Time of Use All Gen"
+    name: "${inverter_name} Time of Use All Gen"
     id: ${inverter_prefix}_switch_time_of_use_all_gen
     icon: "mdi:battery-plus"
     optimistic: true
@@ -586,7 +586,7 @@ switch:
           id: ${inverter_prefix}_switch_time_of_use_6_gen
 
   - platform: template
-    name: "Time of Use All Sell"
+    name: "${inverter_name} Time of Use All Sell"
     id: ${inverter_prefix}_switch_time_of_use_all_sell
     icon: "mdi:battery-plus"
     optimistic: true
@@ -625,7 +625,7 @@ number:
   - platform: modbus_controller
     use_write_multiple: true
     modbus_controller_id: ${modbus_controller_id}
-    name: "Time of Use Enabled Raw"
+    name: "${inverter_name} Time of Use Enabled Raw"
     id: ${inverter_prefix}_time_of_use_enabled_raw
     register_type: holding
     address: 146
@@ -633,7 +633,7 @@ number:
 
   - platform: modbus_controller
     use_write_multiple: true
-    name: "Time of Use 1 Start Raw"
+    name: "${inverter_name} Time of Use 1 Start Raw"
     id: ${inverter_prefix}_time_of_use_1_start_raw
     modbus_controller_id: ${modbus_controller_id}
     register_type: holding
@@ -645,7 +645,7 @@ number:
 
   - platform: modbus_controller
     use_write_multiple: true
-    name: "Time of Use 2 Start Raw"
+    name: "${inverter_name} Time of Use 2 Start Raw"
     id: ${inverter_prefix}_time_of_use_2_start_raw
     modbus_controller_id: ${modbus_controller_id}
     register_type: holding
@@ -657,7 +657,7 @@ number:
 
   - platform: modbus_controller
     use_write_multiple: true
-    name: "Time of Use 3 Start Raw"
+    name: "${inverter_name} Time of Use 3 Start Raw"
     id: ${inverter_prefix}_time_of_use_3_start_raw
     modbus_controller_id: ${modbus_controller_id}
     register_type: holding
@@ -669,7 +669,7 @@ number:
 
   - platform: modbus_controller
     use_write_multiple: true
-    name: "Time of Use 4 Start Raw"
+    name: "${inverter_name} Time of Use 4 Start Raw"
     id: ${inverter_prefix}_time_of_use_4_start_raw
     modbus_controller_id: ${modbus_controller_id}
     register_type: holding
@@ -681,7 +681,7 @@ number:
 
   - platform: modbus_controller
     use_write_multiple: true
-    name: "Time of Use 5 Start Raw"
+    name: "${inverter_name} Time of Use 5 Start Raw"
     id: ${inverter_prefix}_time_of_use_5_start_raw
     modbus_controller_id: ${modbus_controller_id}
     register_type: holding
@@ -693,7 +693,7 @@ number:
 
   - platform: modbus_controller
     use_write_multiple: true
-    name: "Time of Use 6 Start Raw"
+    name: "${inverter_name} Time of Use 6 Start Raw"
     id: ${inverter_prefix}_time_of_use_6_start_raw
     modbus_controller_id: ${modbus_controller_id}
     register_type: holding
@@ -706,7 +706,7 @@ number:
   - platform: modbus_controller
     use_write_multiple: true
     modbus_controller_id: ${modbus_controller_id}
-    name: "Time of Use 1 Voltage"
+    name: "${inverter_name} Time of Use 1 Voltage"
     id: ${inverter_prefix}_time_of_use_1_voltage
     register_type: holding
     address: 160
@@ -723,7 +723,7 @@ number:
   - platform: modbus_controller
     use_write_multiple: true
     modbus_controller_id: ${modbus_controller_id}
-    name: "Time of Use 2 Voltage"
+    name: "${inverter_name} Time of Use 2 Voltage"
     id: ${inverter_prefix}_time_of_use_2_voltage
     register_type: holding
     address: 161
@@ -740,7 +740,7 @@ number:
   - platform: modbus_controller
     use_write_multiple: true
     modbus_controller_id: ${modbus_controller_id}
-    name: "Time of Use 3 Voltage"
+    name: "${inverter_name} Time of Use 3 Voltage"
     id: ${inverter_prefix}_time_of_use_3_voltage
     register_type: holding
     address: 162
@@ -757,7 +757,7 @@ number:
   - platform: modbus_controller
     use_write_multiple: true
     modbus_controller_id: ${modbus_controller_id}
-    name: "Time of Use 4 Voltage"
+    name: "${inverter_name} Time of Use 4 Voltage"
     id: ${inverter_prefix}_time_of_use_4_voltage
     register_type: holding
     address: 163
@@ -774,7 +774,7 @@ number:
   - platform: modbus_controller
     use_write_multiple: true
     modbus_controller_id: ${modbus_controller_id}
-    name: "Time of Use 5 Voltage"
+    name: "${inverter_name} Time of Use 5 Voltage"
     id: ${inverter_prefix}_time_of_use_5_voltage
     register_type: holding
     address: 164
@@ -791,7 +791,7 @@ number:
   - platform: modbus_controller
     use_write_multiple: true
     modbus_controller_id: ${modbus_controller_id}
-    name: "Time of Use 6 Voltage"
+    name: "${inverter_name} Time of Use 6 Voltage"
     id: ${inverter_prefix}_time_of_use_6_voltage
     register_type: holding
     address: 165
@@ -808,7 +808,7 @@ number:
   - platform: modbus_controller
     use_write_multiple: true
     modbus_controller_id: ${modbus_controller_id}
-    name: "Time of Use 1 Out Power"
+    name: "${inverter_name} Time of Use 1 Out Power"
     id: ${inverter_prefix}_time_of_use_1_out_power
     unit_of_measurement: W
     device_class: power
@@ -820,7 +820,7 @@ number:
   - platform: modbus_controller
     use_write_multiple: true
     modbus_controller_id: ${modbus_controller_id}
-    name: "Time of Use 2 Out Power"
+    name: "${inverter_name} Time of Use 2 Out Power"
     id: ${inverter_prefix}_time_of_use_2_out_power
     unit_of_measurement: W
     device_class: power
@@ -832,7 +832,7 @@ number:
   - platform: modbus_controller
     use_write_multiple: true
     modbus_controller_id: ${modbus_controller_id}
-    name: "Time of Use 3 Out Power"
+    name: "${inverter_name} Time of Use 3 Out Power"
     id: ${inverter_prefix}_time_of_use_3_out_power
     unit_of_measurement: W
     device_class: power
@@ -844,7 +844,7 @@ number:
   - platform: modbus_controller
     use_write_multiple: true
     modbus_controller_id: ${modbus_controller_id}
-    name: "Time of Use 4 Out Power"
+    name: "${inverter_name} Time of Use 4 Out Power"
     id: ${inverter_prefix}_time_of_use_4_out_power
     unit_of_measurement: W
     device_class: power
@@ -856,7 +856,7 @@ number:
   - platform: modbus_controller
     use_write_multiple: true
     modbus_controller_id: ${modbus_controller_id}
-    name: "Time of Use 5 Out Power"
+    name: "${inverter_name} Time of Use 5 Out Power"
     id: ${inverter_prefix}_time_of_use_5_out_power
     unit_of_measurement: W
     device_class: power
@@ -868,7 +868,7 @@ number:
   - platform: modbus_controller
     use_write_multiple: true
     modbus_controller_id: ${modbus_controller_id}
-    name: "Time of Use 6 Out Power"
+    name: "${inverter_name} Time of Use 6 Out Power"
     id: ${inverter_prefix}_time_of_use_6_out_power
     unit_of_measurement: W
     device_class: power
@@ -880,7 +880,7 @@ number:
   - platform: modbus_controller
     use_write_multiple: true
     modbus_controller_id: ${modbus_controller_id}
-    name: "Time of Use 1 SoC"
+    name: "${inverter_name} Time of Use 1 SoC"
     id: ${inverter_prefix}_time_of_use_1_soc
     unit_of_measurement: "%"
     address: 166
@@ -894,7 +894,7 @@ number:
   - platform: modbus_controller
     use_write_multiple: true
     modbus_controller_id: ${modbus_controller_id}
-    name: "Time of Use 2 SoC"
+    name: "${inverter_name} Time of Use 2 SoC"
     id: ${inverter_prefix}_time_of_use_2_soc
     unit_of_measurement: "%"
     address: 167
@@ -908,7 +908,7 @@ number:
   - platform: modbus_controller
     use_write_multiple: true
     modbus_controller_id: ${modbus_controller_id}
-    name: "Time of Use 3 SoC"
+    name: "${inverter_name} Time of Use 3 SoC"
     id: ${inverter_prefix}_time_of_use_3_soc
     unit_of_measurement: "%"
     address: 168
@@ -922,7 +922,7 @@ number:
   - platform: modbus_controller
     use_write_multiple: true
     modbus_controller_id: ${modbus_controller_id}
-    name: "Time of Use 4 SoC"
+    name: "${inverter_name} Time of Use 4 SoC"
     id: ${inverter_prefix}_time_of_use_4_soc
     unit_of_measurement: "%"
     address: 169
@@ -936,7 +936,7 @@ number:
   - platform: modbus_controller
     use_write_multiple: true
     modbus_controller_id: ${modbus_controller_id}
-    name: "Time of Use 5 SoC"
+    name: "${inverter_name} Time of Use 5 SoC"
     id: ${inverter_prefix}_time_of_use_5_soc
     unit_of_measurement: "%"
     address: 170
@@ -950,7 +950,7 @@ number:
   - platform: modbus_controller
     use_write_multiple: true
     modbus_controller_id: ${modbus_controller_id}
-    name: "Time of Use 6 SoC"
+    name: "${inverter_name} Time of Use 6 SoC"
     id: ${inverter_prefix}_time_of_use_6_soc
     unit_of_measurement: "%"
     address: 171
@@ -963,7 +963,7 @@ number:
 
   - platform: template
     mode: box
-    name: "Time of Use All SoC"
+    name: "${inverter_name} Time of Use All SoC"
     id: ${inverter_prefix}_time_of_use_all_soc
     unit_of_measurement: "%"
     device_class: battery
@@ -997,7 +997,7 @@ number:
 
   - platform: template
     mode: box
-    name: "Time of Use All Out Power"
+    name: "${inverter_name} Time of Use All Out Power"
     id: ${inverter_prefix}_time_of_use_all_out_power
     unit_of_measurement: W
     device_class: power
@@ -1031,7 +1031,7 @@ number:
 
   - platform: template
     mode: box
-    name: "Time of Use All Voltage"
+    name: "${inverter_name} Time of Use All Voltage"
     id: ${inverter_prefix}_time_of_use_all_voltage
     unit_of_measurement: "V"
     device_class: voltage
@@ -1066,7 +1066,7 @@ number:
   - platform: modbus_controller
     use_write_multiple: true
     modbus_controller_id: ${modbus_controller_id}
-    name: "Time of Use 1 Raw"
+    name: "${inverter_name} Time of Use 1 Raw"
     id: ${inverter_prefix}_time_of_use_1_raw
     register_type: holding
     address: 172
@@ -1075,7 +1075,7 @@ number:
   - platform: modbus_controller
     use_write_multiple: true
     modbus_controller_id: ${modbus_controller_id}
-    name: "Time of Use 2 Raw"
+    name: "${inverter_name} Time of Use 2 Raw"
     id: ${inverter_prefix}_time_of_use_2_raw
     register_type: holding
     address: 173
@@ -1084,7 +1084,7 @@ number:
   - platform: modbus_controller
     use_write_multiple: true
     modbus_controller_id: ${modbus_controller_id}
-    name: "Time of Use 3 Raw"
+    name: "${inverter_name} Time of Use 3 Raw"
     id: ${inverter_prefix}_time_of_use_3_raw
     register_type: holding
     address: 174
@@ -1093,7 +1093,7 @@ number:
   - platform: modbus_controller
     use_write_multiple: true
     modbus_controller_id: ${modbus_controller_id}
-    name: "Time of Use 4 Raw"
+    name: "${inverter_name} Time of Use 4 Raw"
     id: ${inverter_prefix}_time_of_use_4_raw
     register_type: holding
     address: 175
@@ -1102,7 +1102,7 @@ number:
   - platform: modbus_controller
     use_write_multiple: true
     modbus_controller_id: ${modbus_controller_id}
-    name: "Time of Use 5 Raw"
+    name: "${inverter_name} Time of Use 5 Raw"
     id: ${inverter_prefix}_time_of_use_5_raw
     register_type: holding
     address: 176
@@ -1111,7 +1111,7 @@ number:
   - platform: modbus_controller
     use_write_multiple: true
     modbus_controller_id: ${modbus_controller_id}
-    name: "Time of Use 6 Raw"
+    name: "${inverter_name} Time of Use 6 Raw"
     id: ${inverter_prefix}_time_of_use_6_raw
     register_type: holding
     address: 177

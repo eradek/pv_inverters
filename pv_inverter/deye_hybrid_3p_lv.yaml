@@ -19,6 +19,7 @@ substitutions:
   modbus_controller_id: deye_modbus_controller
   baud_rate: "9600"
   inverter_prefix: "inv3p"
+  inverter_name: "Deye 3P"
   # Safe Mode Default parameters
   default_maximum_battery_charge_current: "140" # Amps
   default_max_sell_power: "12000" # Watts

@@ -153,6 +153,7 @@ packages:
           modbus_inverter_address: "0x01"
           modbus_controller_id: deye_3p_controller
           inverter_prefix: "inv3p"
+          inverter_name: "Deye 3P"
           default_maximum_battery_charge_current: "140"
           default_max_sell_power: "12000"
           default_system_work_mode: "Zero Export To Load"
@@ -170,6 +171,7 @@ packages:
           modbus_inverter_address: "0x02"
           modbus_controller_id: deye_1p_controller
           inverter_prefix: "inv1p"
+          inverter_name: "Deye 1P"
           default_maximum_battery_charge_current: "130"
           default_max_sell_power: "6000"
           default_system_work_mode: "Zero Export To Load"

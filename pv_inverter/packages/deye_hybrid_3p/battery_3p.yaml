@@ -15,7 +15,7 @@
 sensor:
   - platform: modbus_controller
     modbus_controller_id: ${modbus_controller_id}
-    name: "Daily Battery Charge"
+    name: "${inverter_name} Daily Battery Charge"
     id: ${inverter_prefix}_daily_battery_charge
     register_type: holding
     address: 514
@@ -30,7 +30,7 @@ sensor:
 
   - platform: modbus_controller
     modbus_controller_id: ${modbus_controller_id}
-    name: "Daily Battery Discharge"
+    name: "${inverter_name} Daily Battery Discharge"
     id: ${inverter_prefix}_daily_battery_discharge
     register_type: holding
     address: 515
@@ -45,7 +45,7 @@ sensor:
 
   - platform: modbus_controller
     modbus_controller_id: ${modbus_controller_id}
-    name: "Total Battery Charge"
+    name: "${inverter_name} Total Battery Charge"
     id: ${inverter_prefix}_total_battery_charge
     register_type: holding
     address: 516
@@ -60,7 +60,7 @@ sensor:
 
   - platform: modbus_controller
     modbus_controller_id: ${modbus_controller_id}
-    name: "Total Battery Discharge"
+    name: "${inverter_name} Total Battery Discharge"
     id: ${inverter_prefix}_total_battery_discharge
     register_type: holding
     address: 518
@@ -75,7 +75,7 @@ sensor:
 
   - platform: modbus_controller
     modbus_controller_id: ${modbus_controller_id}
-    name: "Battery Temperature"
+    name: "${inverter_name} Battery Temperature"
     register_type: holding
     address: 586
     unit_of_measurement: "°C"
@@ -89,7 +89,7 @@ sensor:
 
   - platform: modbus_controller
     modbus_controller_id: ${modbus_controller_id}
-    name: "Battery Voltage"
+    name: "${inverter_name} Battery Voltage"
     id: ${inverter_prefix}_battery_voltage
     register_type: holding
     address: 587
@@ -103,7 +103,7 @@ sensor:
 
   - platform: modbus_controller
     modbus_controller_id: ${modbus_controller_id}
-    name: "Battery"
+    name: "${inverter_name} Battery"
     register_type: holding
     address: 588
     unit_of_measurement: "%"
@@ -114,7 +114,7 @@ sensor:
 
   - platform: modbus_controller
     modbus_controller_id: ${modbus_controller_id}
-    name: "Battery 2"
+    name: "${inverter_name} Battery 2"
     register_type: holding
     address: 589
     unit_of_measurement: "%"
@@ -126,7 +126,7 @@ sensor:
 
   - platform: modbus_controller
     modbus_controller_id: ${modbus_controller_id}
-    name: "Battery Power"
+    name: "${inverter_name} Battery Power"
     id: ${inverter_prefix}_battery_power
     register_type: holding
     address: 590
@@ -139,7 +139,7 @@ sensor:
 
   - platform: modbus_controller
     modbus_controller_id: ${modbus_controller_id}
-    name: "Battery Current"
+    name: "${inverter_name} Battery Current"
     register_type: holding
     address: 591
     unit_of_measurement: "A"
@@ -152,7 +152,7 @@ sensor:
 
   - platform: modbus_controller
     modbus_controller_id: ${modbus_controller_id}
-    name: "Battery Corrected Capacity"
+    name: "${inverter_name} Battery Corrected Capacity"
     id: ${inverter_prefix}_battery_corrected_capacity
     register_type: holding
     address: 592
@@ -163,7 +163,7 @@ sensor:
 
   - platform: modbus_controller
     modbus_controller_id: ${modbus_controller_id}
-    name: "Battery BMS Charging Voltage"
+    name: "${inverter_name} Battery BMS Charging Voltage"
     id: ${inverter_prefix}_battery_bms_charging_voltage
     register_type: holding
     address: 210
@@ -177,7 +177,7 @@ sensor:
 
   - platform: modbus_controller
     modbus_controller_id: ${modbus_controller_id}
-    name: "Battery BMS Discharging Voltage"
+    name: "${inverter_name} Battery BMS Discharging Voltage"
     id: ${inverter_prefix}_battery_bms_discharging_voltage
     register_type: holding
     address: 211
@@ -191,7 +191,7 @@ sensor:
 
   - platform: modbus_controller
     modbus_controller_id: ${modbus_controller_id}
-    name: "Battery BMS Charging Current"
+    name: "${inverter_name} Battery BMS Charging Current"
     register_type: holding
     address: 212
     unit_of_measurement: "A"
@@ -202,7 +202,7 @@ sensor:
 
   - platform: modbus_controller
     modbus_controller_id: ${modbus_controller_id}
-    name: "Battery BMS Discharging Current"
+    name: "${inverter_name} Battery BMS Discharging Current"
     register_type: holding
     address: 213
     unit_of_measurement: "A"
@@ -213,7 +213,7 @@ sensor:
 
   - platform: modbus_controller
     modbus_controller_id: ${modbus_controller_id}
-    name: "Battery BMS SOC"
+    name: "${inverter_name} Battery BMS SOC"
     register_type: holding
     address: 214
     unit_of_measurement: "%"
@@ -223,7 +223,7 @@ sensor:
 
   - platform: modbus_controller
     modbus_controller_id: ${modbus_controller_id}
-    name: "Battery BMS Voltage"
+    name: "${inverter_name} Battery BMS Voltage"
     id: ${inverter_prefix}_battery_bms_voltage
     register_type: holding
     address: 215
@@ -237,7 +237,7 @@ sensor:
 
   - platform: modbus_controller
     modbus_controller_id: ${modbus_controller_id}
-    name: "Battery BMS Current"
+    name: "${inverter_name} Battery BMS Current"
     register_type: holding
     address: 216
     unit_of_measurement: "A"
@@ -248,7 +248,7 @@ sensor:
 
   - platform: modbus_controller
     modbus_controller_id: ${modbus_controller_id}
-    name: "Battery BMS Max Charging Current"
+    name: "${inverter_name} Battery BMS Max Charging Current"
     register_type: holding
     address: 218
     unit_of_measurement: "A"
@@ -259,7 +259,7 @@ sensor:
 
   - platform: modbus_controller
     modbus_controller_id: ${modbus_controller_id}
-    name: "Battery BMS Max Discharging Current"
+    name: "${inverter_name} Battery BMS Max Discharging Current"
     register_type: holding
     address: 219
     unit_of_measurement: "A"
@@ -270,7 +270,7 @@ sensor:
 
   - platform: modbus_controller
     modbus_controller_id: ${modbus_controller_id}
-    name: "Battery BMS Other Symbol"
+    name: "${inverter_name} Battery BMS Other Symbol"
     register_type: holding
     address: 222
     accuracy_decimals: 0
@@ -279,7 +279,7 @@ sensor:
 
   - platform: modbus_controller
     modbus_controller_id: ${modbus_controller_id}
-    name: "Battery 2 Voltage"
+    name: "${inverter_name} Battery 2 Voltage"
     id: ${inverter_prefix}_battery_2_voltage
     register_type: holding
     address: 593
@@ -294,7 +294,7 @@ sensor:
 
   - platform: modbus_controller
     modbus_controller_id: ${modbus_controller_id}
-    name: "Battery 2 Current"
+    name: "${inverter_name} Battery 2 Current"
     register_type: holding
     address: 594
     unit_of_measurement: "A"
@@ -308,7 +308,7 @@ sensor:
 
   - platform: modbus_controller
     modbus_controller_id: ${modbus_controller_id}
-    name: "Battery 2 Power"
+    name: "${inverter_name} Battery 2 Power"
     id: ${inverter_prefix}_battery_2_power
     register_type: holding
     address: 595
@@ -322,7 +322,7 @@ sensor:
 
   - platform: modbus_controller
     modbus_controller_id: ${modbus_controller_id}
-    name: "Battery 2 Temperature"
+    name: "${inverter_name} Battery 2 Temperature"
     register_type: holding
     address: 596
     unit_of_measurement: "°C"
@@ -337,7 +337,7 @@ sensor:
 binary_sensor:
   - platform: modbus_controller
     modbus_controller_id: ${modbus_controller_id}
-    name: "Battery Alarm"
+    name: "${inverter_name} Battery Alarm"
     register_type: holding
     address: 220
     device_class: problem
@@ -346,7 +346,7 @@ binary_sensor:
 
   - platform: modbus_controller
     modbus_controller_id: ${modbus_controller_id}
-    name: "Battery Fault"
+    name: "${inverter_name} Battery Fault"
     register_type: holding
     address: 221
     device_class: problem
@@ -357,7 +357,7 @@ select:
   - platform: modbus_controller
     use_write_multiple: true
     modbus_controller_id: ${modbus_controller_id}
-    name: "Battery Control Mode"
+    name: "${inverter_name} Battery Control Mode"
     address: 98
     value_type: U_WORD
     entity_category: config
@@ -369,7 +369,7 @@ select:
   - platform: modbus_controller
     use_write_multiple: true
     modbus_controller_id: ${modbus_controller_id}
-    name: "Battery Operation Mode"
+    name: "${inverter_name} Battery Operation Mode"
     id: ${inverter_prefix}_battery_operation_mode
     address: 111
     value_type: U_WORD
@@ -383,7 +383,7 @@ select:
   - platform: modbus_controller
     use_write_multiple: true
     modbus_controller_id: ${modbus_controller_id}
-    name: "Battery BMS Type"
+    name: "${inverter_name} Battery BMS Type"
     address: 223
     value_type: U_WORD
     icon: "mdi:battery-charging-high"
@@ -414,7 +414,7 @@ switch:
   - platform: modbus_controller
     use_write_multiple: true
     modbus_controller_id: ${modbus_controller_id}
-    name: "Battery Wake Up"
+    name: "${inverter_name} Battery Wake Up"
     register_type: holding
     address: 112
     bitmask: 1 # Bit0: Battery 1 wake up (0=enabled, 1=disabled)
@@ -424,7 +424,7 @@ switch:
   - platform: modbus_controller
     use_write_multiple: true
     modbus_controller_id: ${modbus_controller_id}
-    name: "Battery 2 Wake Up"
+    name: "${inverter_name} Battery 2 Wake Up"
     register_type: holding
     address: 112
     bitmask: 256 # Bit8: Battery 2 wake up (0=enabled, 1=disabled)
@@ -435,7 +435,7 @@ switch:
   - platform: modbus_controller
     use_write_multiple: true
     modbus_controller_id: ${modbus_controller_id}
-    name: "Battery Generator Charging"
+    name: "${inverter_name} Battery Generator Charging"
     register_type: holding
     address: 129
     bitmask: 1
@@ -445,7 +445,7 @@ switch:
   - platform: modbus_controller
     use_write_multiple: true
     modbus_controller_id: ${modbus_controller_id}
-    name: "Battery Grid Charging"
+    name: "${inverter_name} Battery Grid Charging"
     register_type: holding
     address: 130
     bitmask: 1
@@ -456,7 +456,7 @@ number:
   - platform: modbus_controller
     use_write_multiple: true
     modbus_controller_id: ${modbus_controller_id}
-    name: "Battery Generator Charging Start Voltage"
+    name: "${inverter_name} Battery Generator Charging Start Voltage"
     id: ${inverter_prefix}_battery_generator_charging_start_voltage
     address: 123
     unit_of_measurement: "V"
@@ -473,7 +473,7 @@ number:
   - platform: modbus_controller
     use_write_multiple: true
     modbus_controller_id: ${modbus_controller_id}
-    name: "Battery Generator Charging Start SOC"
+    name: "${inverter_name} Battery Generator Charging Start SOC"
     address: 124
     unit_of_measurement: "%"
     value_type: U_WORD
@@ -487,7 +487,7 @@ number:
   - platform: modbus_controller
     use_write_multiple: true
     modbus_controller_id: ${modbus_controller_id}
-    name: "Battery Generator Charging Current"
+    name: "${inverter_name} Battery Generator Charging Current"
     address: 125
     unit_of_measurement: "A"
     device_class: current
@@ -502,7 +502,7 @@ number:
   - platform: modbus_controller
     use_write_multiple: true
     modbus_controller_id: ${modbus_controller_id}
-    name: "Battery Grid Charging Start Voltage"
+    name: "${inverter_name} Battery Grid Charging Start Voltage"
     id: ${inverter_prefix}_battery_grid_charging_start_voltage
     address: 126
     unit_of_measurement: "V"
@@ -519,7 +519,7 @@ number:
   - platform: modbus_controller
     use_write_multiple: true
     modbus_controller_id: ${modbus_controller_id}
-    name: "Battery Grid Charging Start SOC"
+    name: "${inverter_name} Battery Grid Charging Start SOC"
     address: 127
     unit_of_measurement: "%"
     value_type: U_WORD
@@ -533,7 +533,7 @@ number:
   - platform: modbus_controller
     use_write_multiple: true
     modbus_controller_id: ${modbus_controller_id}
-    name: "Battery Equalization Cycle"
+    name: "${inverter_name} Battery Equalization Cycle"
     address: 105
     unit_of_measurement: "d"
     device_class: duration
@@ -548,7 +548,7 @@ number:
   - platform: modbus_controller
     use_write_multiple: true
     modbus_controller_id: ${modbus_controller_id}
-    name: "Battery Equalization Time"
+    name: "${inverter_name} Battery Equalization Time"
     address: 106
     unit_of_measurement: "h"
     device_class: duration
@@ -564,7 +564,7 @@ number:
   - platform: modbus_controller
     use_write_multiple: true
     modbus_controller_id: ${modbus_controller_id}
-    name: "Battery Temperature Compensation"
+    name: "${inverter_name} Battery Temperature Compensation"
     address: 107
     unit_of_measurement: "mV/°C"
     value_type: S_WORD
@@ -578,7 +578,7 @@ number:
   - platform: modbus_controller
     use_write_multiple: true
     modbus_controller_id: ${modbus_controller_id}
-    name: "Battery Resistance"
+    name: "${inverter_name} Battery Resistance"
     address: 113
     unit_of_measurement: "mΩ"
     value_type: U_WORD
@@ -592,7 +592,7 @@ number:
   - platform: modbus_controller
     use_write_multiple: true
     modbus_controller_id: ${modbus_controller_id}
-    name: "Battery Charging Efficiency"
+    name: "${inverter_name} Battery Charging Efficiency"
     address: 114
     unit_of_measurement: "%"
     value_type: U_WORD
@@ -607,7 +607,7 @@ number:
   - platform: modbus_controller
     use_write_multiple: true
     modbus_controller_id: ${modbus_controller_id}
-    name: "Battery Shutdown SOC"
+    name: "${inverter_name} Battery Shutdown SOC"
     address: 115
     unit_of_measurement: "%"
     value_type: U_WORD
@@ -621,7 +621,7 @@ number:
   - platform: modbus_controller
     use_write_multiple: true
     modbus_controller_id: ${modbus_controller_id}
-    name: "Battery Restart SOC"
+    name: "${inverter_name} Battery Restart SOC"
     address: 116
     unit_of_measurement: "%"
     value_type: U_WORD
@@ -635,7 +635,7 @@ number:
   - platform: modbus_controller
     use_write_multiple: true
     modbus_controller_id: ${modbus_controller_id}
-    name: "Battery Low SOC"
+    name: "${inverter_name} Battery Low SOC"
     address: 117
     unit_of_measurement: "%"
     value_type: U_WORD
@@ -649,7 +649,7 @@ number:
   - platform: modbus_controller
     use_write_multiple: true
     modbus_controller_id: ${modbus_controller_id}
-    name: "Battery Shutdown Voltage"
+    name: "${inverter_name} Battery Shutdown Voltage"
     id: ${inverter_prefix}_battery_shutdown_voltage
     address: 118
     unit_of_measurement: "V"
@@ -666,7 +666,7 @@ number:
   - platform: modbus_controller
     use_write_multiple: true
     modbus_controller_id: ${modbus_controller_id}
-    name: "Battery Restart Voltage"
+    name: "${inverter_name} Battery Restart Voltage"
     id: ${inverter_prefix}_battery_restart_voltage
     address: 119
     unit_of_measurement: "V"
@@ -683,7 +683,7 @@ number:
   - platform: modbus_controller
     use_write_multiple: true
     modbus_controller_id: ${modbus_controller_id}
-    name: "Battery Low Voltage"
+    name: "${inverter_name} Battery Low Voltage"
     id: ${inverter_prefix}_battery_low_voltage
     address: 120
     unit_of_measurement: "V"
@@ -700,7 +700,7 @@ number:
   - platform: modbus_controller
     use_write_multiple: true
     modbus_controller_id: ${modbus_controller_id}
-    name: "Battery Equalization Voltage"
+    name: "${inverter_name} Battery Equalization Voltage"
     id: ${inverter_prefix}_battery_equalization_voltage
     address: 99
     unit_of_measurement: "V"
@@ -717,7 +717,7 @@ number:
   - platform: modbus_controller
     use_write_multiple: true
     modbus_controller_id: ${modbus_controller_id}
-    name: "Battery Absorption Voltage"
+    name: "${inverter_name} Battery Absorption Voltage"
     id: ${inverter_prefix}_battery_absorption_voltage
     address: 100
     unit_of_measurement: "V"
@@ -734,7 +734,7 @@ number:
   - platform: modbus_controller
     use_write_multiple: true
     modbus_controller_id: ${modbus_controller_id}
-    name: "Battery Float Voltage"
+    name: "${inverter_name} Battery Float Voltage"
     id: ${inverter_prefix}_battery_float_voltage
     address: 101
     unit_of_measurement: "V"
@@ -751,7 +751,7 @@ number:
   - platform: modbus_controller
     use_write_multiple: true
     modbus_controller_id: ${modbus_controller_id}
-    name: "Battery Capacity"
+    name: "${inverter_name} Battery Capacity"
     address: 102
     unit_of_measurement: "Ah"
     value_type: U_WORD
@@ -765,7 +765,7 @@ number:
   - platform: modbus_controller
     use_write_multiple: true
     modbus_controller_id: ${modbus_controller_id}
-    name: "Battery Empty Voltage"
+    name: "${inverter_name} Battery Empty Voltage"
     id: ${inverter_prefix}_battery_empty_voltage
     address: 103
     unit_of_measurement: "V"
@@ -783,7 +783,7 @@ number:
     use_write_multiple: true
     modbus_controller_id: ${modbus_controller_id}
     id: ${inverter_prefix}_maximum_battery_charge_current
-    name: "Maximum Battery Charge Current"
+    name: "${inverter_name} Maximum Battery Charge Current"
     address: 108
     unit_of_measurement: A
     device_class: current
@@ -795,7 +795,7 @@ number:
     use_write_multiple: true
     modbus_controller_id: ${modbus_controller_id}
     id: ${inverter_prefix}_maximum_battery_discharge_current
-    name: "Maximum Battery Discharge Current"
+    name: "${inverter_name} Maximum Battery Discharge Current"
     address: 109
     unit_of_measurement: A
     device_class: current
@@ -807,7 +807,7 @@ number:
   - platform: modbus_controller
     use_write_multiple: true
     modbus_controller_id: ${modbus_controller_id}
-    name: "Maximum Battery Grid Charge Current"
+    name: "${inverter_name} Maximum Battery Grid Charge Current"
     address: 128
     unit_of_measurement: A
     entity_category: config
@@ -818,7 +818,7 @@ number:
 
   - platform: modbus_controller
     modbus_controller_id: ${modbus_controller_id} 
-    name: "Force Grid Charge Start SOC"
+    name: "${inverter_name} Force Grid Charge Start SOC"
     register_type: holding
     address: 191
     value_type: U_WORD

@@ -15,7 +15,7 @@
 sensor:
   - platform: modbus_controller
     modbus_controller_id: ${modbus_controller_id}
-    name: "Grid L1 Power"
+    name: "${inverter_name} Grid L1 Power"
     register_type: holding
     address: 622
     unit_of_measurement: "W"
@@ -27,7 +27,7 @@ sensor:
 
   - platform: modbus_controller
     modbus_controller_id: ${modbus_controller_id}
-    name: "Grid L2 Power"
+    name: "${inverter_name} Grid L2 Power"
     register_type: holding
     address: 623
     unit_of_measurement: "W"
@@ -39,7 +39,7 @@ sensor:
 
   - platform: modbus_controller
     modbus_controller_id: ${modbus_controller_id}
-    name: "Grid L3 Power"
+    name: "${inverter_name} Grid L3 Power"
     register_type: holding
     address: 624
     unit_of_measurement: "W"
@@ -51,7 +51,7 @@ sensor:
 
   - platform: modbus_controller
     modbus_controller_id: ${modbus_controller_id}
-    name: "Grid Power"
+    name: "${inverter_name} Grid Power"
     register_type: holding
     address: 625
     unit_of_measurement: "W"
@@ -63,7 +63,7 @@ sensor:
 
   - platform: modbus_controller
     modbus_controller_id: ${modbus_controller_id}
-    name: "Grid Frequency"
+    name: "${inverter_name} Grid Frequency"
     register_type: holding
     address: 609
     unit_of_measurement: "Hz"
@@ -76,7 +76,7 @@ sensor:
 
   - platform: modbus_controller
     modbus_controller_id: ${modbus_controller_id}
-    name: "Grid L1 Voltage"
+    name: "${inverter_name} Grid L1 Voltage"
     id: ${inverter_prefix}_grid_voltage_l1
     register_type: holding
     address: 598
@@ -90,7 +90,7 @@ sensor:
 
   - platform: modbus_controller
     modbus_controller_id: ${modbus_controller_id}
-    name: "Grid L2 Voltage"
+    name: "${inverter_name} Grid L2 Voltage"
     id: ${inverter_prefix}_grid_voltage_l2
     register_type: holding
     address: 599
@@ -104,7 +104,7 @@ sensor:
 
   - platform: modbus_controller
     modbus_controller_id: ${modbus_controller_id}
-    name: "Grid L3 Voltage"
+    name: "${inverter_name} Grid L3 Voltage"
     id: ${inverter_prefix}_grid_voltage_l3
     register_type: holding
     address: 600
@@ -118,7 +118,7 @@ sensor:
 
   - platform: modbus_controller
     modbus_controller_id: ${modbus_controller_id}
-    name: "Grid Power Factor"
+    name: "${inverter_name} Grid Power Factor"
     register_type: holding
     address: 621
     unit_of_measurement: "%"
@@ -131,7 +131,7 @@ sensor:
 
   - platform: modbus_controller
     modbus_controller_id: ${modbus_controller_id}
-    name: "Daily Energy Bought"
+    name: "${inverter_name} Daily Energy Bought"
     id: ${inverter_prefix}_daily_energy_bought
     register_type: holding
     address: 520
@@ -146,7 +146,7 @@ sensor:
 
   - platform: modbus_controller
     modbus_controller_id: ${modbus_controller_id}
-    name: "Daily Energy Sold"
+    name: "${inverter_name} Daily Energy Sold"
     id: ${inverter_prefix}_daily_energy_sold
     register_type: holding
     address: 521
@@ -161,7 +161,7 @@ sensor:
 
   - platform: modbus_controller
     modbus_controller_id: ${modbus_controller_id}
-    name: "Total Energy Bought"
+    name: "${inverter_name} Total Energy Bought"
     id: ${inverter_prefix}_total_energy_bought
     register_type: holding
     address: 522
@@ -176,7 +176,7 @@ sensor:
 
   - platform: modbus_controller
     modbus_controller_id: ${modbus_controller_id}
-    name: "Total Energy Sold"
+    name: "${inverter_name} Total Energy Sold"
     id: ${inverter_prefix}_total_energy_sold
     register_type: holding
     address: 524
@@ -191,7 +191,7 @@ sensor:
 
   - platform: modbus_controller
     modbus_controller_id: ${modbus_controller_id}
-    name: "Internal CT L1 Power"
+    name: "${inverter_name} Internal CT L1 Power"
     register_type: holding
     address: 604
     unit_of_measurement: "W"
@@ -203,7 +203,7 @@ sensor:
 
   - platform: modbus_controller
     modbus_controller_id: ${modbus_controller_id}
-    name: "Internal CT L2 Power"
+    name: "${inverter_name} Internal CT L2 Power"
     register_type: holding
     address: 605
     unit_of_measurement: "W"
@@ -215,7 +215,7 @@ sensor:
 
   - platform: modbus_controller
     modbus_controller_id: ${modbus_controller_id}
-    name: "Internal CT L3 Power"
+    name: "${inverter_name} Internal CT L3 Power"
     register_type: holding
     address: 606
     unit_of_measurement: "W"
@@ -227,7 +227,7 @@ sensor:
 
   - platform: modbus_controller
     modbus_controller_id: ${modbus_controller_id}
-    name: "Internal CT Power"
+    name: "${inverter_name} Internal CT Power"
     register_type: holding
     address: 607
     unit_of_measurement: "W"
@@ -239,7 +239,7 @@ sensor:
 
   - platform: modbus_controller
     modbus_controller_id: ${modbus_controller_id}
-    name: "External CT L1 Power"
+    name: "${inverter_name} External CT L1 Power"
     register_type: holding
     address: 616
     unit_of_measurement: "W"
@@ -251,7 +251,7 @@ sensor:
 
   - platform: modbus_controller
     modbus_controller_id: ${modbus_controller_id}
-    name: "External CT L2 Power"
+    name: "${inverter_name} External CT L2 Power"
     register_type: holding
     address: 617
     unit_of_measurement: "W"
@@ -263,7 +263,7 @@ sensor:
 
   - platform: modbus_controller
     modbus_controller_id: ${modbus_controller_id}
-    name: "External CT L3 Power"
+    name: "${inverter_name} External CT L3 Power"
     register_type: holding
     address: 618
     unit_of_measurement: "W"
@@ -275,7 +275,7 @@ sensor:
 
   - platform: modbus_controller
     modbus_controller_id: ${modbus_controller_id}
-    name: "External CT Power"
+    name: "${inverter_name} External CT Power"
     register_type: holding
     address: 619
     unit_of_measurement: "W"
@@ -287,7 +287,7 @@ sensor:
 
   - platform: modbus_controller
     modbus_controller_id: ${modbus_controller_id}
-    name: "Internal CT L1 Current"
+    name: "${inverter_name} Internal CT L1 Current"
     id: ${inverter_prefix}_internal_ct_l1_current
     register_type: holding
     address: 610
@@ -301,7 +301,7 @@ sensor:
 
   - platform: modbus_controller
     modbus_controller_id: ${modbus_controller_id}
-    name: "Internal CT L2 Current"
+    name: "${inverter_name} Internal CT L2 Current"
     id: ${inverter_prefix}_internal_ct_l2_current
     register_type: holding
     address: 611
@@ -315,7 +315,7 @@ sensor:
 
   - platform: modbus_controller
     modbus_controller_id: ${modbus_controller_id}
-    name: "Internal CT L3 Current"
+    name: "${inverter_name} Internal CT L3 Current"
     id: ${inverter_prefix}_internal_ct_l3_current
     register_type: holding
     address: 612
@@ -329,7 +329,7 @@ sensor:
 
   - platform: modbus_controller
     modbus_controller_id: ${modbus_controller_id}
-    name: "External CT L1 Current"
+    name: "${inverter_name} External CT L1 Current"
     id: ${inverter_prefix}_external_ct_l1_current
     register_type: holding
     address: 613
@@ -343,7 +343,7 @@ sensor:
 
   - platform: modbus_controller
     modbus_controller_id: ${modbus_controller_id}
-    name: "External CT L2 Current"
+    name: "${inverter_name} External CT L2 Current"
     id: ${inverter_prefix}_external_ct_l2_current
     register_type: holding
     address: 614
@@ -357,7 +357,7 @@ sensor:
 
   - platform: modbus_controller
     modbus_controller_id: ${modbus_controller_id}
-    name: "External CT L3 Current"
+    name: "${inverter_name} External CT L3 Current"
     id: ${inverter_prefix}_external_ct_l3_current
     register_type: holding
     address: 615
@@ -372,7 +372,7 @@ sensor:
 binary_sensor:
   - platform: modbus_controller
     modbus_controller_id: ${modbus_controller_id}
-    name: "AC Grid Relay"
+    name: "${inverter_name} AC Grid Relay"
     register_type: holding
     address: 552
     bitmask: 0x4
@@ -381,7 +381,7 @@ binary_sensor:
 
   - platform: modbus_controller
     modbus_controller_id: ${modbus_controller_id}
-    name: "CT L1 Self Test"
+    name: "${inverter_name} CT L1 Self Test"
     register_type: holding
     address: 597
     bitmask: 0x01
@@ -393,7 +393,7 @@ binary_sensor:
 
   - platform: modbus_controller
     modbus_controller_id: ${modbus_controller_id}
-    name: "CT L2 Self Test"
+    name: "${inverter_name} CT L2 Self Test"
     register_type: holding
     address: 597
     bitmask: 0x02
@@ -405,7 +405,7 @@ binary_sensor:
 
   - platform: modbus_controller
     modbus_controller_id: ${modbus_controller_id}
-    name: "CT L3 Self Test"
+    name: "${inverter_name} CT L3 Self Test"
     register_type: holding
     address: 597
     bitmask: 0x04
@@ -419,7 +419,7 @@ select:
   - platform: modbus_controller
     use_write_multiple: true
     modbus_controller_id: ${modbus_controller_id}
-    name: "Grid Frequency"
+    name: "${inverter_name} Grid Frequency"
     address: 183
     value_type: U_WORD
     entity_category: config
@@ -431,7 +431,7 @@ select:
   - platform: modbus_controller
     use_write_multiple: true
     modbus_controller_id: ${modbus_controller_id}
-    name: "AC Couple"
+    name: "${inverter_name} AC Couple"
     address: 234
     value_type: U_WORD
     entity_category: config
@@ -449,7 +449,7 @@ select:
   - platform: modbus_controller
     use_write_multiple: true
     modbus_controller_id: ${modbus_controller_id}
-    name: "Grid Voltage"
+    name: "${inverter_name} Grid Voltage"
     address: 138
     value_type: U_WORD
     entity_category: config
@@ -465,7 +465,7 @@ select:
   - platform: modbus_controller
     use_write_multiple: true
     modbus_controller_id: ${modbus_controller_id}
-    name: "Charging Signal"
+    name: "${inverter_name} Charging Signal"
     address: 140
     value_type: U_WORD
     entity_category: config
@@ -480,7 +480,7 @@ switch:
   - platform: modbus_controller
     use_write_multiple: true
     modbus_controller_id: ${modbus_controller_id}
-    name: "Force Off Grid"
+    name: "${inverter_name} Force Off Grid"
     id: ${inverter_prefix}_switch_off_grid
     register_type: holding
     address: 179
@@ -490,14 +490,14 @@ switch:
   - platform: modbus_controller
     use_write_multiple: true
     modbus_controller_id: ${modbus_controller_id}
-    name: "Generator Grid Side"
+    name: "${inverter_name} Generator Grid Side"
     register_type: holding
     address: 189
     entity_category: config
     icon: "mdi:generator-stationary"
 
   - platform: template
-    name: "Asymmetric Phase Feeding"
+    name: "${inverter_name} Asymmetric Phase Feeding"
     id: ${inverter_prefix}_switch_asymmetric_phase_feeding
     icon: "mdi:transmission-tower"
     optimistic: true
@@ -517,7 +517,7 @@ number:
   - platform: modbus_controller
     use_write_multiple: true
     modbus_controller_id: ${modbus_controller_id}
-    name: "Asymmetric Phase Feeding Raw"
+    name: "${inverter_name} Asymmetric Phase Feeding Raw"
     id: ${inverter_prefix}_asymmetric_phase_feeding_raw
     register_type: holding
     address: 237
