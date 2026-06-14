@@ -144,7 +144,7 @@ sensor:
     icon: "mdi:home-lightning-bolt"
 
   - platform: template
-    name: "${inverter_name} "Power Losses" # Includes consumption of the inverter device itself as well AC/DC conversion losses"
+    name: "${inverter_name} Power Losses"
     id: ${inverter_prefix}_power_losses
     unit_of_measurement: "W"
     device_class: power
@@ -155,7 +155,7 @@ sensor:
     icon: "mdi:home-lightning-bolt"
 
   - platform: template
-    name: "${inverter_name} "Daily Losses" # Includes today's consumption of the inverter device itself as well AC/DC conversion losses"
+    name: "${inverter_name} Daily Losses"
     id: ${inverter_prefix}_daily_losses
     unit_of_measurement: "kWh"
     device_class: energy
@@ -174,7 +174,7 @@ sensor:
     icon: "mdi:home-lightning-bolt"
 
   - platform: template
-    name: "${inverter_name} "Total Losses" # Includes total consumption of the inverter device itself as well AC/DC conversion losses"
+    name: "${inverter_name} Total Losses"
     id: ${inverter_prefix}_total_losses
     unit_of_measurement: "kWh"
     device_class: energy

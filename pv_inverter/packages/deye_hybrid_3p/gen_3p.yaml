@@ -137,7 +137,7 @@ sensor:
 binary_sensor:
   - platform: modbus_controller
     modbus_controller_id: ${modbus_controller_id}
-    name: "${inverter_name} "AC Generator Relay" # bit 3"
+    name: "${inverter_name} AC Generator Relay"
     register_type: holding
     address: 552
     bitmask: 0x8
